@@ -1,0 +1,20 @@
+------------------------
+FITNESS REPORT
+------------------------
+Name:Rishi
+BMI:24.82
+Category:Normal
+Recommendation:Maintain current lifestyle.
+
+Name:Meghu
+BMI:38.67
+Category:Obese
+Recommendation:Focus on weight management and consult a healthcare professional.
+
+
+Average_BMI: 31.745
+Highest_BMI:38.67
+Lowest_BMI:24.82
+Users Above BMI 25
+--------------------
+Meghu

@@ -1,0 +1,16 @@
+[
+    {
+        "name": "Rishi",
+        "age": 30,
+        "height": 1.75,
+        "weight": 76,
+        "goal": "A"
+    },
+    {
+        "name": "Meghu",
+        "age": 27,
+        "height": 1.6,
+        "weight": 99,
+        "goal": "B"
+    }
+]
