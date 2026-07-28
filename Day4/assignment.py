@@ -1,6 +1,10 @@
+import json
+from pathlib import Path
+
+
 def calculate_bmi(weight,height):
     if weight <= 0 or height <=0:
-        exit()
+            return "Enter values greater than zero"
     return weight / (height ** 2)
 
 def classify_bmi(bmi):
@@ -25,15 +29,28 @@ def classify_bmi(bmi):
             'recommendation':'Focus on weight management and consult a healthcare professional.'
                }
     else:
-        return 'Error in Code *** Check your values and try again'
-
+        return {
+                'category':'invalid category due to code errors',
+                'recommendation':'Invalid reccomendation due to code errors'
+                }      
 def usersRankedByBMI(users):
     ranks = sorted(users, key=lambda x:x["bmi"], reverse=True)
     sortedList = ''
     for rank in ranks:
         sortedList += f'{rank["name"]} - {rank["bmi"]}\n'
     return sortedList
-                
+
+def addUser(user):
+    user.append(
+                {
+                    "name":str(input('Whats your Name:')),
+                    "age":int(input('Whats your age:')),
+                    "height":float(input('Whats your height in meters:')),
+                    "weight":int(input('Whats your weight in KG:')),
+                    "goal":str(input('Whats your goal:'))
+                }
+                )
+    return user                
     
 def print_report(users,highest_bmi,lowest_bmi,average_bmi,users_bmi_above_25):
 #	user = "\n".join(usr["name"] for usr in users)
@@ -51,9 +68,6 @@ def print_report(users,highest_bmi,lowest_bmi,average_bmi,users_bmi_above_25):
     return f'------------------------\nFITNESS REPORT\n------------------------\n{report}\nAverage_BMI: {average_bmi}\nHighest_BMI:{highest_bmi}\nLowest_BMI:{lowest_bmi}\nUsers Above BMI 25\n--------------------\n{above_25_names}\n'	
 
 def main():
-    import json
-    from pathlib import Path
-    
     pathOfUsersFile = Path("users.json")
     users = []
     moreUsers = ''
@@ -65,15 +79,7 @@ def main():
             moreUsers = input('Do you want to add users(Y/N):')
             if moreUsers == 'Y':
                 try:
-                    users.append(
-                    {
-                        "name":str(input('Whats your Name:')),
-                        "age":int(input('Whats your age:')),
-                        "height":float(input('Whats your height in meters:')),
-                        "weight":int(input('Whats your weight in KG:')),
-                        "goal":str(input('Whats your goal:'))
-                    }
-                    )
+                    addUser(users)
                 except ValueError:
                     print("Enter valid values for Name, Age, Height, Weight and Goal")
                 with open("users.json","w") as file:
@@ -85,15 +91,7 @@ def main():
         while True:
             moreUsers = input('Do you want to add users(Y/N/QUIT):')
             if moreUsers == 'Y':
-                users.append(
-                {
-                    "name":str(input('Whats your Name:')),
-                    "age":int(input('Whats your age:')),
-                    "height":float(input('Whats your height in meters:')),
-                    "weight":int(input('Whats your weight in KG:')),
-                    "goal":str(input('Whats your goal:'))
-                }
-                )
+                addUser(users)
                 with open("users.json","w") as file:
                     json.dump(users,file,indent=4)
             elif moreUsers == 'N':
@@ -102,8 +100,10 @@ def main():
                 break
             else:
                 break
-            
-   
+    
+    if len(users) == 0:
+        print("No users found")
+        
     for user in users:
         bmi = calculate_bmi(user["weight"],user["height"])
         user["bmi"] = round(bmi,2)

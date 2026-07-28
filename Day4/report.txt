@@ -11,10 +11,16 @@ BMI:38.67
 Category:Obese
 Recommendation:Focus on weight management and consult a healthcare professional.
 
+Name:Austin
+BMI:29.09
+Category:Overweight
+Recommendation:Focus on balanced diet and exercise.
 
-Average_BMI: 31.745
+
+Average_BMI: 30.86
 Highest_BMI:38.67
 Lowest_BMI:24.82
 Users Above BMI 25
 --------------------
 Meghu
+Austin

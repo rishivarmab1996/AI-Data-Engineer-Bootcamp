@@ -12,5 +12,12 @@
         "height": 1.6,
         "weight": 99,
         "goal": "B"
+    },
+    {
+        "name": "Austin",
+        "age": 30,
+        "height": 1.9,
+        "weight": 105,
+        "goal": "C"
     }
 ]
