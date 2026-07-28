@@ -126,6 +126,11 @@ def main():
     report = print_report(users,highest_bmi,lowest_bmi,average_bmi,users_bmi_above_25)
     with open("report.txt","w") as file:
         file.write(report)
+
+    searchUser = input("Search user by name:")
+    for usr in users:
+        if usr["name"] == searchUser:
+            print(usr)
     
     #print(usersRankedByBMI(users))
     
