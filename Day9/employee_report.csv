@@ -1,0 +1,9 @@
+EmployeeID,Name,Age,DepartmentID,Salary,Experience,Department,Bonus,Level
+103,John,35,10,92000,8,Engineering,9200,Senior
+107,Sarah,33,30,88000,7,Finance,8800,Senior
+105,Bob,41,20,83000,10,Human Resources,8300,Mid
+101,Rishi,30,10,75000,5,Engineering,7500,Mid
+108,Michael,38,20,72000,6,Human Resources,7200,Mid
+104,Alice,29,30,71000,4,Finance,7100,Mid
+102,Meghu,27,20,68000,3,Human Resources,6800,Junior
+106,David,26,10,65000,2,Engineering,6500,Junior
