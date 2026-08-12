@@ -1,0 +1,9 @@
+EmployeeID,Name,Age,DepartmentID,Salary,Experience
+101,Rishi,30,10,75000,5
+102,Meghu,27,20,68000,3
+103,John,35,10,92000,8
+104,Alice,29,30,71000,4
+105,Bob,41,20,83000,10
+106,David,26,10,65000,2
+107,Sarah,33,30,88000,7
+108,Michael,38,20,72000,6

@@ -1,0 +1,14 @@
+2026-08-11 21:22:00,487 | INFO | ETL pipeline started....
+2026-08-11 21:22:00,487 | INFO | Starting Data Extraction...
+2026-08-11 21:22:00,498 | INFO | data extracted successfully from employees.csv | rows = 8
+2026-08-11 21:22:00,498 | INFO | data extracted successfully from departments.csv | rows = 3
+2026-08-11 21:22:00,498 | INFO | Starting data transformation...
+2026-08-11 21:22:00,503 | INFO | Data Merged Successfully | rows=8
+2026-08-11 21:22:00,505 | INFO | Duplicate records removed
+2026-08-11 21:22:00,505 | INFO | missing values handled
+2026-08-11 21:22:00,505 | INFO | Employee Bonus Calculated
+2026-08-11 21:22:00,506 | INFO | Employee levels created
+2026-08-11 21:22:00,507 | INFO | Department summary created
+2026-08-11 21:22:00,507 | INFO | Data Transformation Completed
+2026-08-11 21:22:00,508 | INFO | Data loaded successfully into output_dir directory
+2026-08-11 21:22:00,508 | INFO | ETL pipeline completed successfully...
